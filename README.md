@@ -98,7 +98,7 @@ This is a teaching client.
 
 ## Read more
 
-- Dev.to: [Patching the MCP SDK Doesn't Fix It. Pin the OAuth Issuer in TypeScript.](DEV_URL)
+- Dev.to: [Patching the MCP SDK Doesn't Fix It. Pin the OAuth Issuer in TypeScript.](https://dev.to/bobbyhalljr/patching-the-mcp-sdk-doesnt-fix-it-pin-the-oauth-issuer-in-typescript-2086)
 - Substack: [Patching the MCP SDK Doesn't Fix It. Pin the OAuth Issuer in TypeScript.](SUBSTACK_URL)
 - LinkedIn: [post](LINKEDIN_URL)
 - Sources: [GHSA-qx49-fqc8-xw99](https://github.com/modelcontextprotocol/python-sdk/security/advisories/GHSA-qx49-fqc8-xw99) (Sep 28, 2026), [Cycode write-up via The IT Nerd](https://itnerd.blog/2026/09/30/guest-post-cycode-uncovers-account-takeover-in-mcp-python-sdk/) (Sep 30, 2026), [WorkOS: Three MCP auth bugs in 30 days](https://workos.com/blog/mcp-auth-bugs-trusting-the-other-side) (Oct 2, 2026)
