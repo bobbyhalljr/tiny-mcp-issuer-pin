@@ -1,0 +1,23 @@
+Credentials: acme-agent, pinned to auth.acme.example (MOCK network, no API key)
+
+Server: honest server (mcp.acme.example)
+  happy-path check  ok: token for mcp.acme.example
+  pinned issuer     ok: token for mcp.acme.example
+
+Server: 404 fallback (mcp.evil.example)
+  happy-path check  LEAKED secret to mcp.evil.example
+                      wire: client_secret + code + code_verifier -> mcp.evil.example
+  pinned issuer     refused: no protected resource metadata
+
+Server: names own server (mcp.evil.example)
+  happy-path check  LEAKED secret to mcp.evil.example
+                      wire: client_secret + code + code_verifier -> mcp.evil.example
+  pinned issuer     refused: server wants mcp.evil.example, secret is pinned to auth.acme.example
+
+Server: claims real resource (mcp.evil.example)
+  happy-path check  LEAKED token for mcp.acme.example to mcp.evil.example
+                      wire: bearer token (audience mcp.acme.example) -> mcp.evil.example
+  pinned issuer     refused: resource mcp.acme.example is not mcp.evil.example
+
+happy-path check  leaked to mcp.evil.example in 3 of 3 hostile runs
+pinned issuer     leaked to mcp.evil.example in 0 of 3 hostile runs
